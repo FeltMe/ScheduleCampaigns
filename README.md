@@ -32,3 +32,9 @@ I "Send" my Templates<p/>
 <p>To run Azure function use <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite">Azurity</a></p>
 <p>More about <a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.priorityqueue-2?view=net-8.0">Priority Queue</a></p>
 <p>Parse CSV file using <a href="https://github.com/JoshClose/CsvHelper">Csv Helper</a></p>
+
+<h2 align="center"/> How to run
+<h5 align="left">To run application select multiple project in Visual Studio</p>
+<p><img src="https://user-images.githubusercontent.com/41016761/236642506-5e283ed4-f2da-40de-9d94-b3dd278c4611.png" alt="альтернативний текст"></p>
+<p>Use Azurity</p>
+<p>Set <b>private const bool RunOnStartup = true;</b> to run it with application start</p>
