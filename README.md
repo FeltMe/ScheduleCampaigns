@@ -24,9 +24,11 @@
 </ul>
 </p>
 
-<p>The main princepie is next: <p/>
+<p>The main princepie is next: </p>
 <p><b>Azure function</b> runed on the some cloud invoke the <b>Api Controller</b>, then I generate Campings and using  <b>Priority Queue</b>  
 I "Send" my Templates<p/>
 
-Parse HTML using HTMLAgilityPack
-To run Azure function use <a Azurity href="https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite"/>
+<p>Parse HTML using <a href="https://html-agility-pack.net/">HTMLAgilityPack</a></p>
+<p>To run Azure function use <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite">Azurity</a></p>
+<p>More about <a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.priorityqueue-2?view=net-8.0">Priority Queue</a></p>
+<p>Parse CSV file using <a href="https://github.com/JoshClose/CsvHelper">Csv Helper</a></p>
