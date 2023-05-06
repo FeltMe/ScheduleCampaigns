@@ -7,9 +7,10 @@ namespace Innovecs_Drozdiuk_Test
 {
 	public class CustomersReader
 	{
+		private const string pathToFile = @"..\Innovecs_Drozdiuk_Test\CustomerData\customers.csv";
 		public async Task<IEnumerable<Customer>> GetCustomersAsync()
 		{
-			var csv = await System.IO.File.ReadAllTextAsync(@"..\..\..\\CustomerData\customers.csv");
+			var csv = await System.IO.File.ReadAllTextAsync(pathToFile);
 			var textReader = new StringReader(csv);
 			var config = new CsvConfiguration(CultureInfo.InvariantCulture)
 			{

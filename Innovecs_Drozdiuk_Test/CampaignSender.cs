@@ -4,9 +4,15 @@ namespace Innovecs_Drozdiuk_Test
 {
 	public class CampaignSender
 	{
-		public async Task SendCampingAsync(CampaignModel campaignModel, StreamWriter streamWriter)
+		private const string fileName = @"..\Innovecs_Drozdiuk_Test\CustomerData\customers.csv";
+		public async Task SendCampingAsync(PriorityQueue<CampaignModel, int> priorityQueue)
 		{
-			await streamWriter.WriteLineAsync(campaignModel?.ToString() + "\n");
+			using var streamWriter = new StreamWriter(fileName);
+			while (priorityQueue.Count > 0)
+			{
+				var campaignModel = priorityQueue.Dequeue();
+				await streamWriter.WriteLineAsync(campaignModel?.ToString() + "\n");
+			}
 		}
 	}
 }
