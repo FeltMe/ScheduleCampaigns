@@ -8,6 +8,5 @@
 		public string City { get; set; }
 		public decimal Deposit { get; set; }
 		public bool NewCustomer { get; set; }
-		public bool IsSended { get; set; } = false;
 	}
 }

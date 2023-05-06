@@ -9,7 +9,7 @@ namespace Innovecs_Drozdiuk_Test
 	{
 		public async Task<IEnumerable<Customer>> GetCustomersAsync()
 		{
-			var csv = await System.IO.File.ReadAllTextAsync(@"CustomerData\customers.csv");
+			var csv = await System.IO.File.ReadAllTextAsync(@"..\..\..\\CustomerData\customers.csv");
 			var textReader = new StringReader(csv);
 			var config = new CsvConfiguration(CultureInfo.InvariantCulture)
 			{
@@ -18,7 +18,7 @@ namespace Innovecs_Drozdiuk_Test
 			var csvr = new CsvReader(textReader, config);
 			var records = csvr.GetRecords<Customer>();
 
-			return records;
+			return records.ToList();
 		}
 	}
 }

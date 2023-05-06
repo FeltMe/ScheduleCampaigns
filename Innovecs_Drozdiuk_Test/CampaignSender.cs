@@ -15,7 +15,7 @@ namespace Innovecs_Drozdiuk_Test
 			setReceiversToFalse(campaignModel?.Receivers); //todo handle null
 		}
 
-		private void setReceiversToFalse(IEnumerable<Customer> customerModels)
+		private void setReceiversToFalse(IEnumerable<CustomerSendingModel> customerModels)
 		{
 			foreach (var customerSendingModel in customerModels)
 			{

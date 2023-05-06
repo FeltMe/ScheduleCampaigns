@@ -13,7 +13,8 @@ var priorityQueue = new PriorityQueue<CampaignModel, int>();
 
 foreach (var customer in customers)
 {
-	var handleModel = models.FirstOrDefault(x => x.Predicate(customer));
+	var customerSendingModel = new CustomerSendingModel();
+	var handleModel = models.FirstOrDefault(x => x.Predicate(customerSendingModel));
 	handleModel?.Receivers.Append(customer);
 }
 
