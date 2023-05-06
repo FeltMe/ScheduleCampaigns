@@ -1,7 +1,7 @@
-﻿using Innovecs_Drozdiuk_Test.FactoryMethod.Creators;
-using Innovecs_Drozdiuk_Test.Models;
+﻿using MyApplicationName.BLL.FactoryMethod.Creators;
+using MyApplicationName.Models.Models;
 
-namespace Innovecs_Drozdiuk_Test.Initialization
+namespace MyApplicationName.BLL.Initialization
 {
 	public class CampaingCreatorsInitialization
 	{

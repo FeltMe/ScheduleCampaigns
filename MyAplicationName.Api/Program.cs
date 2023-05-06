@@ -1,5 +1,5 @@
-using WebApplication1.Interfaces;
-using WebApplication1.Services;
+using MyApplicationName.Api.Interfaces;
+using MyApplicationName.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

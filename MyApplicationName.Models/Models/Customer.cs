@@ -1,4 +1,4 @@
-﻿namespace Innovecs_Drozdiuk_Test.Models
+﻿namespace MyApplicationName.Models.Models
 {
 	public class Customer
 	{

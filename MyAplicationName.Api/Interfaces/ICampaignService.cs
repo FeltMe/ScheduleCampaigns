@@ -1,4 +1,4 @@
-﻿namespace WebApplication1.Interfaces
+﻿namespace MyApplicationName.Api.Interfaces
 {
 	public interface ICampaignService
 	{

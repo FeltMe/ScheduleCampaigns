@@ -1,6 +1,6 @@
-﻿using Innovecs_Drozdiuk_Test.Models;
+﻿using MyApplicationName.Models.Models;
 
-namespace Innovecs_Drozdiuk_Test.FactoryMethod
+namespace MyApplicationName.BLL.FactoryMethod
 {
 	public abstract class CampaignCreator
 	{

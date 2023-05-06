@@ -1,9 +1,9 @@
-﻿using WebApplication1.Interfaces;
-using Innovecs_Drozdiuk_Test.Initialization;
-using Innovecs_Drozdiuk_Test.Models;
-using Innovecs_Drozdiuk_Test;
+﻿using MyApplicationName.Api.Interfaces;
+using MyApplicationName.Models.Models;
+using MyApplicationName.BLL;
+using MyApplicationName.BLL.Initialization;
 
-namespace WebApplication1.Services
+namespace MyApplicationName.Api.Services
 {
 	public class CampaignService : ICampaignService
 	{

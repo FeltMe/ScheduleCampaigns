@@ -1,4 +1,4 @@
-﻿namespace Innovecs_Drozdiuk_Test.Models
+﻿namespace MyApplicationName.Models.Models
 {
 	public class CampaignModel
 	{
@@ -14,7 +14,7 @@
 
 		private string GetCustomersNames(IEnumerable<Customer> customers)
 		{
-			return customers.Any() && customers.Any() ? string.Join(",", customers.Select(x=> $"{x.CUSTOMER_ID} {x.Gender} {x.Deposit}")) : "None";
+			return customers.Any() && customers.Any() ? string.Join(",", customers.Select(x => $"{x.CUSTOMER_ID} {x.Gender} {x.Deposit}")) : "None";
 		}
 	}
 }

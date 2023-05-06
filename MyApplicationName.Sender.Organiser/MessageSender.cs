@@ -1,10 +1,10 @@
-﻿using Innovecs_Drozdiuk_Test.Models;
+﻿using MyApplicationName.Models.Models;
 
 namespace MyApplicationName.Sender.Organiser
 {
 	public class MessageSender
 	{
-		private const string fileName = @"..\Innovecs_Drozdiuk_Test\send.txt";
+		private const string fileName = @"..\MyApplicationName.BLL\send.txt";
 
 		/// <summary>
 		/// In case when we write to file we have to wait till writing ends. 
