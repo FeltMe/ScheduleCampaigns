@@ -19,13 +19,13 @@ namespace MyApplicationName.Api.Services
 		}
 
 		#region public Methods
-		public async Task SendNotification()
+		public async Task SendNotification(TimeModel timeModel)
 		{
 			var campaignModels = campaingCreators.GetAllCampaignModels();
 			var customers = await customersReader.GetCustomersAsync();
 
 			RecipientsDetermination(customers, campaignModels);
-			await SendCampingAsync(campaignModels);
+			await SendCampingAsync(campaignModels, timeModel);
 		}
 		#endregion
 
@@ -40,14 +40,17 @@ namespace MyApplicationName.Api.Services
 			}
 		}
 
-		private async Task SendCampingAsync(IEnumerable<CampaignModel> campaignModels)
+		private async Task SendCampingAsync(IEnumerable<CampaignModel> campaignModels, TimeModel timeModel)
 		{
 			var priorityQueue = new PriorityQueue<CampaignModel, int>();
 			foreach (var item in campaignModels)
 			{
-				priorityQueue.Enqueue(item, item.Priority);
+				if (timeModel.CheckForSameTime(item.Time))
+				{
+					priorityQueue.Enqueue(item, item.Priority);
+				}
 			}
-			
+
 			await campaignSender.SendCampingAsync(priorityQueue);
 		}
 

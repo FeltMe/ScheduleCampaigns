@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyApplicationName.Api.Interfaces;
+using MyApplicationName.Models.Models;
 
 namespace MyApplicationName.Api.Controllers
 {
@@ -20,10 +21,10 @@ namespace MyApplicationName.Api.Controllers
 		}
 
 		[HttpPost("sendNotification")]
-        public async Task SendCampingNotification()
+        public async Task SendCampingNotification(TimeModel timeModel)
 		{
 			_logger.LogInformation("Controller CampaignController start sendNotification request");
-			await _campaignService.SendNotification();
+			await _campaignService.SendNotification(timeModel);
         }
     }
 }
