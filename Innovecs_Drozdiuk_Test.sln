@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApplicationName.BL", "Inn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApplicationName.Api", "WebApplication1\MyApplicationName.Api.csproj", "{BAD9BFF2-97BA-4CA6-8F13-FEA5F0C62FAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApplicationName.Sender.Organiser", "MyApplicationName.Sender.Organiser\MyApplicationName.Sender.Organiser.csproj", "{F5089D55-4A61-4A80-98E2-12877FC62C4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApplicationName.Models", "MyApplicationName.Models\MyApplicationName.Models.csproj", "{0D7210D3-3E45-4DFE-9A13-43B0A29D4212}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{BAD9BFF2-97BA-4CA6-8F13-FEA5F0C62FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAD9BFF2-97BA-4CA6-8F13-FEA5F0C62FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAD9BFF2-97BA-4CA6-8F13-FEA5F0C62FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5089D55-4A61-4A80-98E2-12877FC62C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5089D55-4A61-4A80-98E2-12877FC62C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5089D55-4A61-4A80-98E2-12877FC62C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5089D55-4A61-4A80-98E2-12877FC62C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D7210D3-3E45-4DFE-9A13-43B0A29D4212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D7210D3-3E45-4DFE-9A13-43B0A29D4212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D7210D3-3E45-4DFE-9A13-43B0A29D4212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D7210D3-3E45-4DFE-9A13-43B0A29D4212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
