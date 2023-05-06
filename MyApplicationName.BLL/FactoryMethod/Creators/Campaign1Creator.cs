@@ -1,16 +1,16 @@
-﻿using Innovecs_Drozdiuk_Test.Models;
+﻿using MyApplicationName.Models.Models;
 
-namespace Innovecs_Drozdiuk_Test.FactoryMethod
+namespace MyApplicationName.BLL.FactoryMethod.Creators
 {
 	public class Campaign1Creator : CampaignCreator
 	{
 		private const string maleGender = "Male";
 		private const string templateName = "Template A";
 		private const int sendHour = 10;
-		private const int sendMinute = 10;
-		private const int campingPriority = 10;
+		private const int sendMinute = 15;
+		private const int campingPriority = 1;
 
- 		public override CampaignModel Create()
+		public override CampaignModel Create()
 		{
 			return new CampaignModel()
 			{
