@@ -1,0 +1,6 @@
+
+Template A here
+Sends in 6:43 PM as 10:15 AM, to next customers id: 1,3,5,8,9,10,14,16,19,20,25,26,27,28,29,33
+
+Template A here
+Sends in 6:43 PM as 10:15 AM, to next customers id: 12,21,23,31

@@ -1,5 +1,4 @@
-﻿using MyApplicationName.BLL.FactoryMethod;
-using MyApplicationName.Models.Models;
+﻿using MyApplicationName.Models.Models;
 
 namespace MyApplicationName.BLL.FactoryMethod.Creators
 {
@@ -13,10 +12,12 @@ namespace MyApplicationName.BLL.FactoryMethod.Creators
 
 		public override CampaignModel Create()
 		{
+			var templateModel = new TemplateModel(templateName);
+			templateModel.TemplateString = base.GetTemplateText(templateName);
 			return new CampaignModel()
 			{
 				Priority = campingPriority,
-				TemplateName = templateName,
+				TemplateModel = templateModel,
 				Time = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, sendHour, sendMinute, 0),
 				Predicate = delegate (Customer customer) { return customer.Age > aboveTheAge; },
 				Receivers = new List<Customer>()
