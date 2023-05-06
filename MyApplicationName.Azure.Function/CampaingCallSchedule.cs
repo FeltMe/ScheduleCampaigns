@@ -14,6 +14,7 @@ namespace MyApplicationName.Azure.Function
     {
 		private readonly HttpClient _client;
 		private readonly Options _options;
+		private const bool RunOnStartup = true;
 
 		public CampaingCallSchedule(IHttpClientFactory httpClientFactory, IOptions<Options> options)
         {
@@ -23,25 +24,25 @@ namespace MyApplicationName.Azure.Function
 
 		[FunctionName("CampingCallScheduleAt10_05")]
 		[FixedDelayRetry(5, "00:01:00")]
-		public async Task CampingCallScheduleAt10_05([TimerTrigger("0 5 10 * * *", RunOnStartup = true)] TimerInfo timer, ILogger log)
+		public async Task CampingCallScheduleAt10_05([TimerTrigger("0 5 10 * * *", RunOnStartup = RunOnStartup)] TimerInfo timer, ILogger log)
 		{
-			await ExecuteAsync("POST", _options.Url + "https://localhost:7226/api/Campaign/sendNotification", "application/json",
+			await ExecuteAsync("POST", _options.ApiUrl + "/api/Campaign/sendNotification", "application/json",
 						$"{{ \"Hours\": \"{10}\", \"Minutes\" : \"{15}\" }}", log);
 		}
 
 		[FunctionName("CampingCallScheduleAt10_10")]
 		[FixedDelayRetry(5, "00:01:00")]
-		public async Task CampingCallScheduleAt10_10([TimerTrigger("0 10 10 * * *", RunOnStartup = false)] TimerInfo timer, ILogger log)
+		public async Task CampingCallScheduleAt10_10([TimerTrigger("0 10 10 * * *", RunOnStartup = !RunOnStartup)] TimerInfo timer, ILogger log)
 		{
-			await ExecuteAsync("POST", _options.Url + "https://localhost:7226/api/sendNotification", "application/json",
+			await ExecuteAsync("POST", _options.ApiUrl + "/api/sendNotification", "application/json",
 						$"{{ \"Hours\": \"{10}\", \"Minutes\" : \"{15}\" }}", log);
 		}
 
 		[FunctionName("CampingCallScheduleAt10_15")]
 		[FixedDelayRetry(5, "00:01:00")]
-		public async Task CampingCallScheduleAt10_15([TimerTrigger("0 15 10 * * *", RunOnStartup = false)] TimerInfo timer, ILogger log)
+		public async Task CampingCallScheduleAt10_15([TimerTrigger("0 15 10 * * *", RunOnStartup = !RunOnStartup)] TimerInfo timer, ILogger log)
 		{
-			await ExecuteAsync("POST", _options.Url + "https://localhost:7226/api/sendNotification", "application/json", 
+			await ExecuteAsync("POST", _options.ApiUrl + "/api/sendNotification", "application/json", 
 			$"{{ \"Hours\": \"{10}\", \"Minutes\" : \"{15}\" }}", log);
 		}
 

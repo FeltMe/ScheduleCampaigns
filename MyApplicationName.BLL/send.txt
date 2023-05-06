@@ -1,4 +1,6 @@
-Template Template A, sends in 5/6/2023 10:15:00 AM, to next customers: 1 Male 104,3 Male 208,5 Male 123,8 Male 52,9 Male 151,10 Male 57,14 Male 153,16 Male 134,19 Male 141,20 Male 189,25 Male 139,26 Male 128,27 Male 76,28 Male 203,29 Male 54,33 Male 103
 
-Template Template A, sends in 5/6/2023 10:15:00 AM, to next customers: 12 Female 154,21 Female 134,23 Female 237,31 Female 143
+Template A here
+Sends in 6:43 PM as 10:15 AM, to next customers id: 1,3,5,8,9,10,14,16,19,20,25,26,27,28,29,33
 
+Template A here
+Sends in 6:43 PM as 10:15 AM, to next customers id: 12,21,23,31
