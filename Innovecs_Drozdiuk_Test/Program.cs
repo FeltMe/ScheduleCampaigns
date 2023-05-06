@@ -1,5 +1,4 @@
 ﻿using Innovecs_Drozdiuk_Test;
-using Innovecs_Drozdiuk_Test.FactoryMethod;
 using Innovecs_Drozdiuk_Test.Initialization;
 using Innovecs_Drozdiuk_Test.Models;
 
