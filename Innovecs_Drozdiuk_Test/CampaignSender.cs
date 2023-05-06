@@ -4,7 +4,7 @@ namespace Innovecs_Drozdiuk_Test
 {
 	public class CampaignSender
 	{
-		private const string fileName = "send.txt";
+		private const string fileName = "../../../send.txt";
 		public async Task SendCampingAsync(CampaignModel campaignModel, CancellationToken cancellationToken)
 		{
 			while (!cancellationToken.IsCancellationRequested)

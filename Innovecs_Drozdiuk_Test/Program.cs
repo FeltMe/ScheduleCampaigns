@@ -13,18 +13,20 @@ var priorityQueue = new PriorityQueue<CampaignModel, int>();
 
 foreach (var customer in customers)
 {
-	var customerSendingModel = new CustomerSendingModel();
+	var customerSendingModel = new CustomerSendingModel(customer);
 	var handleModel = models.FirstOrDefault(x => x.Predicate(customerSendingModel));
-	handleModel?.Receivers.Append(customer);
+	handleModel?.Receivers.Add(customerSendingModel);
 }
 
 foreach (var item in models)
 {
 	priorityQueue.Enqueue(item, item.Priority);
-}
+} 
 
 while(priorityQueue.Count > 0)
 {
 	var campaignModel = priorityQueue.Dequeue();
-	await sender.SendCampingAsync(campaignModel, CancellationToken.None);
+	sender.SendCampingAsync(campaignModel, CancellationToken.None);
 }
+
+Console.WriteLine("End");
