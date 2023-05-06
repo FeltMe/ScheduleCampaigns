@@ -1,10 +1,4 @@
 Template Template A, sends in 5/6/2023 10:15:00 AM, to next customers: 1 Male 104,3 Male 208,5 Male 123,8 Male 52,9 Male 151,10 Male 57,14 Male 153,16 Male 134,19 Male 141,20 Male 189,25 Male 139,26 Male 128,27 Male 76,28 Male 203,29 Male 54,33 Male 103
 
-Template Template B, sends in 5/6/2023 10:05:00 AM, to next customers: 4 Female 134,7 Female 174,13 Female 135,15 Female 241,17 Female 212,18 Female 97,22 Female 81,24 Female 119,30 Female 165,32 Female 61,34 Female 121,35 Female 214,36 Female 111,37 Female 223,39 Female 60,40 Female 53
-
 Template Template A, sends in 5/6/2023 10:15:00 AM, to next customers: 12 Female 154,21 Female 134,23 Female 237,31 Female 143
-
-Template Template C, sends in 5/6/2023 10:05:00 AM, to next customers: None
-
-Template Template C, sends in 5/6/2023 10:10:00 AM, to next customers: 2 Female 209,6 Female 210,11 Female 131,38 Female 78
 

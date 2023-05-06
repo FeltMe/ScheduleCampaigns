@@ -21,10 +21,10 @@ namespace MyApplicationName.Api.Controllers
 		}
 
 		[HttpPost("sendNotification")]
-        public async Task SendCampingNotification(TimeModel timeModel)
+        public async Task SendCampingNotification(TimeModel model)
 		{
 			_logger.LogInformation("Controller CampaignController start sendNotification request");
-			await _campaignService.SendNotification(timeModel);
+			await _campaignService.SendNotification(model);
         }
     }
 }
