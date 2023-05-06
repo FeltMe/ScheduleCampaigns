@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Innovecs_Drozdiuk_Test\Innovecs_Drozdiuk_Test.csproj" />
+    <ProjectReference Include="..\Innovecs_Drozdiuk_Test\MyApplicationName.BL.csproj" />
   </ItemGroup>
 
 </Project>
