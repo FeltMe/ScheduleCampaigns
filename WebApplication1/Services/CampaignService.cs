@@ -30,6 +30,7 @@ namespace WebApplication1.Services
 		#endregion
 
 		#region Private Methods
+
 		private void RecipientsDetermination(IEnumerable<Customer> customers, IEnumerable<CampaignModel> campaignModels)
 		{
 			foreach (var customer in customers)
@@ -46,9 +47,10 @@ namespace WebApplication1.Services
 			{
 				priorityQueue.Enqueue(item, item.Priority);
 			}
-
+			
 			await campaignSender.SendCampingAsync(priorityQueue);
 		}
+
 		#endregion
 	}
 }

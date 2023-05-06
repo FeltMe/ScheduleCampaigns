@@ -4,7 +4,7 @@ namespace Innovecs_Drozdiuk_Test
 {
 	public class CampaignSender
 	{
-		private const string fileName = @"..\Innovecs_Drozdiuk_Test\CustomerData\customers.csv";
+		private const string fileName = @"..\Innovecs_Drozdiuk_Test\send.txt";
 		public async Task SendCampingAsync(PriorityQueue<CampaignModel, int> priorityQueue)
 		{
 			using var streamWriter = new StreamWriter(fileName);
