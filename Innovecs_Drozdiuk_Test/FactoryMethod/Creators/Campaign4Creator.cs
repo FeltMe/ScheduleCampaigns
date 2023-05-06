@@ -17,8 +17,8 @@ namespace Innovecs_Drozdiuk_Test.FactoryMethod.Creators
                 Priority = campingPriority,
                 TemplateName = templateName,
                 Time = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, sendHour, sendMinute, 0),
-                Predicate = delegate (CustomerSendingModel customer) { return customer.Deposit > depositeMoreThan; },
-                Receivers = new List<CustomerSendingModel>()
+                Predicate = delegate (Customer customer) { return customer.Deposit > depositeMoreThan; },
+                Receivers = new List<Customer>()
             };
         }
     }

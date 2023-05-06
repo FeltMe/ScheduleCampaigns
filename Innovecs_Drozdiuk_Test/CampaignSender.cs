@@ -4,23 +4,9 @@ namespace Innovecs_Drozdiuk_Test
 {
 	public class CampaignSender
 	{
-		private const string fileName = "../../../send.txt";
-		public async Task SendCampingAsync(CampaignModel campaignModel, CancellationToken cancellationToken)
+		public async Task SendCampingAsync(CampaignModel campaignModel, StreamWriter streamWriter)
 		{
-			while (!cancellationToken.IsCancellationRequested)
-			{
-				using var streamWriter = new StreamWriter(fileName);
-				await streamWriter.WriteLineAsync(campaignModel?.ToString());
-			}
-			setReceiversToFalse(campaignModel?.Receivers); //todo handle null
-		}
-
-		private void setReceiversToFalse(IEnumerable<CustomerSendingModel> customerModels)
-		{
-			foreach (var customerSendingModel in customerModels)
-			{
-				customerSendingModel.IsSended = true;
-			}
+			await streamWriter.WriteLineAsync(campaignModel?.ToString() + "\n");
 		}
 	}
 }
