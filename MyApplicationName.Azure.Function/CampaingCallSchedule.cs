@@ -22,28 +22,15 @@ namespace MyApplicationName.Azure.Function
 			_options = options.Value;
 		}
 
-		[FunctionName("CampingCallScheduleAt10_05")]
+		[FunctionName("CampingCallSchedule")]
 		[FixedDelayRetry(5, "00:01:00")]
-		public async Task CampingCallScheduleAt10_05([TimerTrigger("0 5 10 * * *", RunOnStartup = RunOnStartup)] TimerInfo timer, ILogger log)
+		public async Task CampingCallScheduleAt10_05([TimerTrigger("0 5 * * * *", RunOnStartup = RunOnStartup)] TimerInfo timer, ILogger log)
 		{
+			var hours = DateTime.UtcNow.Hour;
+			var minutes = DateTime.UtcNow.Minute;
+
 			await ExecuteAsync("POST", _options.ApiUrl + "/api/Campaign/sendNotification", "application/json",
-						$"{{ \"Hours\": \"{10}\", \"Minutes\" : \"{15}\" }}", log);
-		}
-
-		[FunctionName("CampingCallScheduleAt10_10")]
-		[FixedDelayRetry(5, "00:01:00")]
-		public async Task CampingCallScheduleAt10_10([TimerTrigger("0 10 10 * * *", RunOnStartup = !RunOnStartup)] TimerInfo timer, ILogger log)
-		{
-			await ExecuteAsync("POST", _options.ApiUrl + "/api/sendNotification", "application/json",
-						$"{{ \"Hours\": \"{10}\", \"Minutes\" : \"{15}\" }}", log);
-		}
-
-		[FunctionName("CampingCallScheduleAt10_15")]
-		[FixedDelayRetry(5, "00:01:00")]
-		public async Task CampingCallScheduleAt10_15([TimerTrigger("0 15 10 * * *", RunOnStartup = !RunOnStartup)] TimerInfo timer, ILogger log)
-		{
-			await ExecuteAsync("POST", _options.ApiUrl + "/api/sendNotification", "application/json", 
-			$"{{ \"Hours\": \"{10}\", \"Minutes\" : \"{15}\" }}", log);
+						$"{{ \"Hours\": \"{10}\", \"Minutes\" : \"{15}\" }}", log); //Test value 10:15
 		}
 
 		private async Task ExecuteAsync(string method, string requestUrl, string contentType, string body, ILogger log)

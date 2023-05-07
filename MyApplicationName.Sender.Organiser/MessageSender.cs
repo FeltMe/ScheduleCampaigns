@@ -11,6 +11,7 @@ namespace MyApplicationName.Sender.Organiser
 			while (priorityQueue.Count > 0)
 			{
 				var campaignModel = priorityQueue.Dequeue();
+				await Task.Delay(3000); //delay
 				await streamWriter.WriteLineAsync(campaignModel.GetPlainText());
 			}
 		}
